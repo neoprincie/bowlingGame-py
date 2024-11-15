@@ -39,6 +39,12 @@ class TestBowling(unittest.TestCase):
 
         self.assertEqual(26, self.game.score())
 
+    def perfect_game(self):
+        for i in range(12):
+            self.game.roll(10)
+
+        self.assertEqual(300, self.game.score())
+
 
 if __name__ == '__main__':
     unittest.main()
